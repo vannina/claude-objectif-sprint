@@ -4,7 +4,9 @@
 
 A Claude Code mod that shows your goal's progress above the prompt: the steps Claude planned, the share done, the time elapsed and the current step.
 
-![Preview of the band above the prompt](docs/apercu.svg)
+![The band fills up step by step](docs/demo.gif)
+
+<sub>Drawn by Claude Code's own engine (test `tests/rendu.test.tsx`), turned into frames by `docs/fabriquer-gif.py`.</sub>
 
 > [!NOTE]
 > The mod's interface is in French ("étapes", "En cours", "Masquer"). The command is `/objectif`.
@@ -67,6 +69,12 @@ Give Claude a multi-step task: as soon as it writes its task list, the band appe
 - [How it works](docs/fonctionnement.md)
 - [FAQ and troubleshooting](docs/faq.md)
 - [Changelog](CHANGELOG.md)
+
+## Test
+
+```bash
+claude plugin test .
+```
 
 ## Uninstall
 

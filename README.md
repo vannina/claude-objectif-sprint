@@ -4,7 +4,9 @@
 
 Un mod Claude Code qui affiche, au-dessus du prompt, la progression de ton objectif : les étapes prévues par Claude, le pourcentage fait, le temps écoulé et l'étape en cours.
 
-![Aperçu de la barre au-dessus du prompt](docs/apercu.svg)
+![La barre se remplit au fil des étapes](docs/demo.gif)
+
+<sub>Rendu par le moteur de Claude Code (test `tests/rendu.test.tsx`), mis en images par `docs/fabriquer-gif.py`.</sub>
 
 ## Pourquoi
 
@@ -65,6 +67,18 @@ Donne à Claude une tâche en plusieurs étapes : dès qu'il pose sa liste de t�
 - [FAQ et dépannage](docs/faq.md)
 - [Historique des versions](CHANGELOG.md)
 
+## Tester
+
+```bash
+claude plugin test .
+```
+
+Pour régénérer la démo animée (macOS, Pillow) :
+
+```bash
+claude plugin test . | python3 docs/fabriquer-gif.py docs/demo.gif
+```
+
 ## Désinstaller
 
 ```bash
@@ -84,7 +98,9 @@ hooks/
   register.tsx       le mod : commande /objectif, lecture des tâches, barre
 types/
   index.d.ts         contrat de l'état de session ($.state)
-docs/                documentation et aperçu
+tests/
+  rendu.test.tsx     fait dessiner la barre par le moteur et vérifie chaque étape
+docs/                documentation, démo animée et son script
 ```
 
 Autrice : Vannina Michelosi. Licence MIT.

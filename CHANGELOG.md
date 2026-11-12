@@ -7,3 +7,4 @@
 - Étapes lues depuis TodoWrite, TaskCreate et TaskUpdate, et la liste de l'appli Desktop (`update_plan`).
 - Commande `/objectif <texte>` et `/objectif fin`.
 - Bouton « Masquer ».
+- Test de rendu `tests/rendu.test.tsx` et démo animée `docs/demo.gif` générée à partir du rendu du moteur.
