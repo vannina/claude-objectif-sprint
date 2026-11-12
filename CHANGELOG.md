@@ -1,5 +1,12 @@
 # Historique des versions
 
+## 0.2.0 · 2026-11-12
+
+- Le chrono défile à la seconde entre deux étapes (minuteur du mod, redessin seulement quand l'objectif est en cours et la barre visible).
+- Format du temps : « 4 min 07 s » sous l'heure, « 1 h 04 min » au-delà.
+- Correction : « Terminé en … » se fige à la dernière étape faite au lieu de continuer à compter.
+- Démo animée à une image par seconde, test du chrono.
+
 ## 0.1.0 · 2026-11-12
 
 - Première version publique.

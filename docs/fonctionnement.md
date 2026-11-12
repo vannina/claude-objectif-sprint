@@ -24,7 +24,9 @@ Statuts reconnus : `pending` (à faire), `in_progress` (en cours), `completed` (
 - `/objectif <texte>` fixe le départ du chrono à l'instant de la commande.
 - Sans objectif épinglé, une nouvelle liste relance le chrono quand la précédente était vide ou terminée.
 - Avec un objectif épinglé, le chrono continue jusqu'au prochain `/objectif`.
-- Le temps affiché se met à jour à chaque redessin de la bande (nouvelle étape, nouveau message), pas chaque seconde.
+- Le chrono défile à la seconde : un minuteur du mod demande un redessin chaque seconde, seulement quand un objectif est en cours et que la barre est visible. Le reste du temps, il ne redessine rien.
+- Quand toutes les étapes sont faites, le temps se fige à l'heure de la dernière étape (« Terminé en … »). Si une étape revient à faire, il repart.
+- Format : « 4 min 07 s » sous l'heure, « 1 h 04 min » au-delà.
 
 ## Affichage
 
@@ -42,7 +44,7 @@ L'objectif, les étapes et le masquage vivent dans l'état de session (`$.state`
 
 ## Ce que le mod ne fait pas
 
-- Aucun appel réseau, aucun accès aux fichiers, aucun processus lancé.
+- Aucun appel réseau, aucun accès aux fichiers, aucun processus lancé. Seul un minuteur d'une seconde tourne, pour le chrono.
 - Aucun appel au modèle : il ne consomme aucun token.
 - Il ne bloque, ne retarde et ne réécrit aucun outil. Son hook d'outil appelle d'abord l'outil, puis lit le résultat ; un `.catch` laisse passer l'appel si le code de la barre échoue.
 

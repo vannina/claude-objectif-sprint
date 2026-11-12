@@ -6,7 +6,7 @@ A Claude Code mod that shows your goal's progress above the prompt: the steps Cl
 
 ![The band fills up step by step](docs/demo.gif)
 
-<sub>Drawn by Claude Code's own engine (test `tests/rendu.test.tsx`), turned into frames by `docs/fabriquer-gif.py`.</sub>
+<sub>Drawn by Claude Code's own engine (test `tests/rendu.test.tsx`), turned into frames by `docs/fabriquer-gif.py`. Sped up (x4).</sub>
 
 > [!NOTE]
 > The mod's interface is in French ("étapes", "En cours", "Masquer"). The command is `/objectif`.
@@ -18,7 +18,8 @@ On a long task Claude already keeps a step list, but it scrolls away with the co
 ## Features
 
 - **No setup**: the band fills itself from the task list Claude already keeps (TodoWrite, TaskCreate and TaskUpdate, or the Desktop app's plan).
-- **One line**: bar, percentage, steps done out of total, elapsed time, current step.
+- **One line**: bar, percentage, steps done out of total, current step.
+- **Live timer**: the time ticks every second while work goes on, then freezes once everything is done.
 - **Pinned goal**: `/objectif <text>` shows your goal as a title and restarts the timer.
 - **Unobtrusive**: a "Masquer" (hide) button hides the band until the next list.
 - **Safe**: read-only, no network call, no model call, so no tokens spent. An error in the band never blocks a tool.

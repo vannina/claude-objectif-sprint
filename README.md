@@ -6,7 +6,7 @@ Un mod Claude Code qui affiche, au-dessus du prompt, la progression de ton objec
 
 ![La barre se remplit au fil des étapes](docs/demo.gif)
 
-<sub>Rendu par le moteur de Claude Code (test `tests/rendu.test.tsx`), mis en images par `docs/fabriquer-gif.py`.</sub>
+<sub>Rendu par le moteur de Claude Code (test `tests/rendu.test.tsx`), mis en images par `docs/fabriquer-gif.py`. Démo accélérée (x4).</sub>
 
 ## Pourquoi
 
@@ -15,7 +15,8 @@ Sur une tâche longue, Claude tient déjà une liste d'étapes, mais elle défil
 ## Fonctionnalités
 
 - **Zéro configuration** : la barre se remplit toute seule à partir de la liste de tâches que Claude tient déjà (TodoWrite, TaskCreate et TaskUpdate, ou la liste de l'appli Desktop).
-- **L'essentiel en une ligne** : barre, pourcentage, étapes faites sur le total, temps écoulé, étape en cours.
+- **L'essentiel en une ligne** : barre, pourcentage, étapes faites sur le total, étape en cours.
+- **Chrono en direct** : le temps défile à la seconde pendant le travail, puis se fige quand tout est fait.
 - **Objectif épinglé** : `/objectif <texte>` affiche ton objectif en titre et relance le chrono.
 - **Discret** : un bouton « Masquer » cache la barre jusqu'à la prochaine liste.
 - **Sans risque** : lecture seule, aucun appel réseau, aucun appel au modèle, donc aucun token consommé. Une erreur de la barre ne bloque jamais un outil.

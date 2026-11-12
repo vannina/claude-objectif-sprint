@@ -77,7 +77,9 @@ def main():
     frames = [paint(p, mono, bold, emoji) for p in frames_from(sys.stdin)]
     if not frames:
         sys.exit("Aucune ligne RENDU reçue : lancer `claude plugin test .` en amont.")
-    durations = [900] * (len(frames) - 1) + [2600]
+    # Une image par seconde simulée : 250 ms chacune, la démo tourne en accéléré (x4).
+    step = 250 if len(frames) > 10 else 900
+    durations = [step] * (len(frames) - 1) + [2600]
     pal = [f.convert("P", palette=Image.ADAPTIVE, colors=64) for f in frames]
     pal[0].save(out, save_all=True, append_images=pal[1:], duration=durations, loop=0, optimize=True)
     print(f"{out} : {len(frames)} images")

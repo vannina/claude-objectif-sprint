@@ -24,7 +24,7 @@ Non. Il n'appelle jamais le modèle. La seule trace dans la conversation est la 
 
 ### Le temps affiché semble figé
 
-Il se recalcule à chaque redessin de la bande, donc à chaque étape ou message, et non chaque seconde.
+C'est normal quand toutes les étapes sont faites : le temps s'arrête à la dernière (« Terminé en … »). Pendant le travail, il défile à la seconde. S'il reste figé alors qu'une étape est en cours, la barre est peut-être masquée, ou la version installée est la 0.1.0 : `claude plugin update objectif-sprint`.
 
 ### Mon objectif a disparu
 
