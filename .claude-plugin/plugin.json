@@ -1,0 +1,11 @@
+{
+  "name": "objectif-sprint",
+  "version": "0.1.0",
+  "description": "Barre de progression d'un objectif au-dessus du prompt : étapes prévues par Claude, pourcentage fait, temps écoulé, étape en cours. Commande /objectif pour épingler l'objectif.",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "Vannina Michelosi"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/vannina/claude-objectif-sprint"
+}

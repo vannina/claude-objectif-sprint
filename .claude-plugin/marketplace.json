@@ -1,0 +1,11 @@
+{
+  "name": "claude-objectif-sprint",
+  "owner": { "name": "Vannina Michelosi" },
+  "plugins": [
+    {
+      "name": "objectif-sprint",
+      "source": "./",
+      "description": "Barre de progression d'un objectif au-dessus du prompt de Claude Code"
+    }
+  ]
+}
